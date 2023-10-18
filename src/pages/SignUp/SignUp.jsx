@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -28,7 +29,17 @@ const SignUp = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        const user = result.user;
+        console.log(user);
+
+        // update user's profile
+        updateProfile(user, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then()
+          .catch();
+
         Swal.fire({
           icon: "success",
           title: "SignUp successful",
