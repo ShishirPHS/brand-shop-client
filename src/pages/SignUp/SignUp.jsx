@@ -46,8 +46,11 @@ const SignUp = () => {
         });
         navigate("/");
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: err.message,
+        });
       });
   };
 
