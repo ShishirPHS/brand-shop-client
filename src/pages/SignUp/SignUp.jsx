@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
 
@@ -11,6 +17,19 @@ const SignUp = () => {
     const password = e.target.password.value;
 
     console.log(name, photo, email, password);
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          icon: "success",
+          title: "SignUp successful",
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
