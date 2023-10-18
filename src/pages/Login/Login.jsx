@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
@@ -78,6 +79,7 @@ const Login = () => {
                   </Link>
                 </p>
               </form>
+              <SocialLogin></SocialLogin>
             </div>
           </div>
         </div>
