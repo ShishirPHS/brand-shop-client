@@ -126,7 +126,7 @@ const AddProduct = () => {
           />
         </div>
         <div className="mt-6">
-          <button className="btn">Add Product</button>
+          <input className="btn" type="submit" value="Add Product" />
         </div>
       </form>
     </div>
