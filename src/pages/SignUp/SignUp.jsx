@@ -5,6 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { updateProfile } from "firebase/auth";
+import "./SignUp.css";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -114,7 +115,7 @@ const SignUp = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="registerBtn normal-case btn bg-[#4A4040] text-white">
+                  <button className="signUpBtn normal-case btn bg-[#4A4040] text-white">
                     SignUp
                   </button>
                 </div>

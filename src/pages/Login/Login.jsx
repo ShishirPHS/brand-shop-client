@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import "./Login.css";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
