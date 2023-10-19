@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
   const [brands, setBrands] = useState([]);
@@ -16,19 +17,18 @@ const Brands = () => {
       </h2>
       <div className="flex justify-evenly">
         {brands.map((brand) => (
-          <div
-            className="flex flex-col items-center border p-5 rounded-lg cursor-pointer"
-            key={brand.id}
-          >
-            <div className="flex-grow mb-5">
-              <img
-                className="w-[150px]"
-                src={brand.brand_image}
-                alt={`logo of ${brand.brand_name}`}
-              />
+          <Link key={brand.id} to={`/brandedProduct/${brand.brand_name}`}>
+            <div className="flex flex-col items-center border p-5 rounded-lg h-full">
+              <div className="flex-grow mb-5">
+                <img
+                  className="w-[150px]"
+                  src={brand.brand_image}
+                  alt={`logo of ${brand.brand_name}`}
+                />
+              </div>
+              <h4 className="text-3xl ">{brand.brand_name}</h4>
             </div>
-            <h4 className="text-3xl ">{brand.brand_name}</h4>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
