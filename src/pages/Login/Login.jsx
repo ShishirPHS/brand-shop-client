@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -7,6 +7,8 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { userLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -22,6 +24,9 @@ const Login = () => {
           icon: "success",
           title: "Login successful",
         });
+
+        // navigate after successful login
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);

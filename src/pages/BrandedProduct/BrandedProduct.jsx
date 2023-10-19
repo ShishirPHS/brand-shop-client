@@ -9,7 +9,7 @@ const BrandedProduct = () => {
   );
 
   return (
-    <div>
+    <div className="container mx-auto">
       <h2>brand based product will show here</h2>
       <div>{selectedBrandedProducts.length}</div>
     </div>
