@@ -9,10 +9,11 @@ const AddProduct = () => {
     const name = form.name.value;
     const brand = form.brand.value;
     const type = form.type.value;
+    const price = form.price.value;
     const description = form.description.value;
     const rating = form.rating.value;
 
-    const product = { image, name, brand, type, description, rating };
+    const product = { image, name, brand, type, price, description, rating };
     console.log(product);
 
     // send product to the server side
@@ -84,6 +85,18 @@ const AddProduct = () => {
             type="text"
             name="type"
             placeholder="Product Type"
+            className="w-full  input input-bordered"
+            required
+          />
+        </div>
+        <div className="">
+          <label className="label">
+            <span className="label-text font-semibold">Price</span>
+          </label>
+          <input
+            type="text"
+            name="price"
+            placeholder="Price"
             className="w-full  input input-bordered"
             required
           />
