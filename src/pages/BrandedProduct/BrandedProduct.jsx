@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
+import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 const BrandedProduct = () => {
   const brandedProducts = useLoaderData();
@@ -63,8 +64,17 @@ const BrandedProduct = () => {
               </div>
             </div>
           </div>
-          <h2>brand based product will show here</h2>
-          <div>{selectedBrandedProducts.length}</div>
+          <h2 className="text-center text-3xl font-semibold mt-24 mb-20">
+            Products of {brandName}
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-40">
+            {selectedBrandedProducts.map((singleProd) => (
+              <SingleProduct
+                key={singleProd._id}
+                singleProd={singleProd}
+              ></SingleProduct>
+            ))}
+          </div>
         </div>
       </div>
     </div>
