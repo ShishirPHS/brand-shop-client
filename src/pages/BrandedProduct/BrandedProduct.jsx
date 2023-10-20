@@ -28,9 +28,12 @@ const BrandedProduct = () => {
       <div>
         <div className="container mx-auto">
           <div>
-            <div className="carousel w-full">
+            <div className="carousel h-[500px] w-full">
               <div id="slide1" className="carousel-item relative w-full">
-                <img src={adImgForSelectedBrand[0]?.image} className="" />
+                <img
+                  src={adImgForSelectedBrand[0]?.image}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide3" className="btn btn-circle">
                     ❮
@@ -41,7 +44,10 @@ const BrandedProduct = () => {
                 </div>
               </div>
               <div id="slide2" className="carousel-item relative w-full">
-                <img src={adImgForSelectedBrand[1]?.image} className="" />
+                <img
+                  src={adImgForSelectedBrand[1]?.image}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide1" className="btn btn-circle">
                     ❮
@@ -52,7 +58,10 @@ const BrandedProduct = () => {
                 </div>
               </div>
               <div id="slide3" className="carousel-item relative w-full">
-                <img src={adImgForSelectedBrand[2]?.image} className="" />
+                <img
+                  src={adImgForSelectedBrand[2]?.image}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                   <a href="#slide2" className="btn btn-circle">
                     ❮
