@@ -9,7 +9,7 @@ const ProductDetails = () => {
   const handleAddToCart = (prod) => {
     // send product to the server side to add to cart
     fetch(
-      "https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/productCart",
+      "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/productCart",
       {
         method: "POST",
         headers: {

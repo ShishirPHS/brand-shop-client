@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/brandedProduct"
+            "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/brandedProduct"
           ),
       },
       {
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/product/${params.id}`
+            `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/product/${params.id}`
           ),
       },
       {
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/product/${params.id}`
+            `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/product/${params.id}`
           ),
       },
       {
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/cartProducts"
+            "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/cartProducts"
           ),
       },
     ],
