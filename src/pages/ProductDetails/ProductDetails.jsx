@@ -1,11 +1,37 @@
-import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
   const product = useLoaderData();
-  const { _id, image, name, brand, type, price, rating, description } = product;
+  const { image, name, brand, type, price, rating, description } = product;
+
+  const handleAddToCart = (prod) => {
+    // send product to the server side to add to cart
+    fetch("http://localhost:5000/productCart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(prod),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Product added to cart successfully",
+          });
+        }
+      });
+  };
 
   return (
     <div className="container mx-auto my-40">
+      <h3 className="text-center font-bold text-3xl mb-12">
+        Details of {name}
+      </h3>
       <div className="card card-side bg-base-100 shadow-xl h-full pr-8">
         <figure className="h-[300px] mr-8">
           <img
@@ -32,9 +58,9 @@ const ProductDetails = () => {
           </div>
           <p className="mt-5">{description}</p>
           <div className="mt-5">
-            <Link className="mr-3" to={`/prodCart/${_id}`}>
-              <button className="btn">Add to cart</button>
-            </Link>
+            <button onClick={() => handleAddToCart(product)} className="btn">
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
