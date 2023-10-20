@@ -69,13 +69,26 @@ const AddProduct = () => {
           <label className="label">
             <span className="label-text font-semibold">Brand Name</span>
           </label>
-          <input
+          {/* <input
             type="text"
             name="brand"
             placeholder="Brand Name"
             className="w-full  input input-bordered"
             required
-          />
+          /> */}
+          <select
+            className="w-full border-2 rounded-lg py-3 px-2"
+            name="brand"
+            id=""
+            required
+          >
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Gucci">Gucci</option>
+            <option value="Zara">Zara</option>
+            <option value="H&M">H&M</option>
+            <option value="Levi's">Levis</option>
+          </select>
         </div>
         <div className="">
           <label className="label">
@@ -117,13 +130,25 @@ const AddProduct = () => {
           <label className="label">
             <span className="label-text font-semibold">Rating</span>
           </label>
-          <input
+          {/* <input
             type="text"
             name="rating"
             placeholder="Rating out of 5"
             className="w-full  input input-bordered"
             required
-          />
+          /> */}
+          <select
+            className="w-full border-2 rounded-lg py-3 px-2"
+            name="rating"
+            id=""
+            required
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
         <div className="mt-6">
           <input className="btn" type="submit" value="Add Product" />
