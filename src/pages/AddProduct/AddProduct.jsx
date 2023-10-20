@@ -19,7 +19,7 @@ const AddProduct = () => {
 
     // send product to the server side
     fetch(
-      "https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/product",
+      "https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/product",
       {
         method: "POST",
         headers: {

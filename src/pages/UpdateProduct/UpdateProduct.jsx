@@ -21,7 +21,7 @@ const UpdateProduct = () => {
 
     // send request to server for update product
     fetch(
-      `https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/product/${_id}`,
+      `https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/product/${_id}`,
       {
         method: "PUT",
         headers: {

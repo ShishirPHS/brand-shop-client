@@ -20,7 +20,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/deleteFromCart/${id}`,
+          `https://brandshop-server-5gtbugx2m-shishir-ahmeds-projects.vercel.app/deleteFromCart/${id}`,
           {
             method: "DELETE",
           }
