@@ -44,7 +44,10 @@ const router = createBrowserRouter([
             <BrandedProduct></BrandedProduct>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/brandedProduct"),
+        loader: () =>
+          fetch(
+            "https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/brandedProduct"
+          ),
       },
       {
         path: `/prodUpdate/:id`,
@@ -54,7 +57,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: `/productDetails/:id`,
@@ -64,7 +69,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: `/myCart`,
@@ -73,7 +80,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cartProducts"),
+        loader: () =>
+          fetch(
+            "https://brandshop-server-hfxxp71yu-shishir-ahmeds-projects.vercel.app/cartProducts"
+          ),
       },
     ],
   },
