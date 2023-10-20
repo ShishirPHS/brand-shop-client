@@ -1,14 +1,47 @@
 import { useLoaderData } from "react-router-dom";
 import Header from "../../components/Header/Header";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const MyCart = () => {
   const productsOfCart = useLoaderData();
+  const [cartP, setCartP] = useState(productsOfCart);
+
+  const handleDeleteFromCart = (id) => {
+    console.log("btn clicked");
+
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/deleteFromCart/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "Deleted from your cart.", "success");
+            }
+            const remaining = cartP.filter(
+              (singleCartItem) => singleCartItem._id !== id
+            );
+            setCartP(remaining);
+          });
+      }
+    });
+  };
 
   return (
     <div>
       <Header></Header>
-      <div className="grid grid-cols-2 gap-6 mt-36">
-        {productsOfCart.map((singleCartProduct) => (
+      <div className="container mx-auto grid grid-cols-2 gap-6 mt-36 mb-32">
+        {cartP?.map((singleCartProduct) => (
           <div
             key={singleCartProduct._id}
             className="card card-side bg-base-100 shadow-xl h-full"
@@ -43,6 +76,12 @@ const MyCart = () => {
                   </span>
                 </p>
               </div>
+              <button
+                className="mt-5 btn"
+                onClick={() => handleDeleteFromCart(singleCartProduct._id)}
+              >
+                Delete from cart
+              </button>
             </div>
           </div>
         ))}
