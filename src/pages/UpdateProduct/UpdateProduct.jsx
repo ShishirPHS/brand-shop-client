@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
   const product = useLoaderData();
-  const { _id, image, name, brand, type, price, description, rating } = product;
+  const { _id, image, name, brand, type, price, rating } = product;
 
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -14,10 +14,9 @@ const UpdateProduct = () => {
     const brand = form.brand.value;
     const type = form.type.value;
     const price = form.price.value;
-    const description = form.description.value;
     const rating = form.rating.value;
 
-    const newProduct = { image, name, brand, type, price, description, rating };
+    const newProduct = { image, name, brand, type, price, rating };
 
     // send request to server for update product
     fetch(`http://localhost:5000/product/${_id}`, {
@@ -118,19 +117,6 @@ const UpdateProduct = () => {
             placeholder="Price"
             className="w-full  input input-bordered"
             defaultValue={price}
-            required
-          />
-        </div>
-        <div className="">
-          <label className="label">
-            <span className="label-text font-semibold">Short Description</span>
-          </label>
-          <input
-            type="text"
-            name="description"
-            placeholder="Short description of product"
-            className="w-full  input input-bordered"
-            defaultValue={description}
             required
           />
         </div>
