@@ -45,9 +45,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () =>
-          fetch(
-            "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/brandedProduct"
-          ),
+          fetch("https://brandshop-server-six.vercel.app/brandedProduct"),
       },
       {
         path: `/prodUpdate/:id`,
@@ -57,9 +55,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/product/${params.id}`
-          ),
+          fetch(`https://brandshop-server-six.vercel.app/product/${params.id}`),
       },
       {
         path: `/productDetails/:id`,
@@ -69,9 +65,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/product/${params.id}`
-          ),
+          fetch(`https://brandshop-server-six.vercel.app/product/${params.id}`),
       },
       {
         path: `/myCart`,
@@ -81,9 +75,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () =>
-          fetch(
-            "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/cartProducts"
-          ),
+          fetch("https://brandshop-server-six.vercel.app/cartProducts"),
       },
     ],
   },

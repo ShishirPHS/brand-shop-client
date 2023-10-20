@@ -13,9 +13,7 @@ const BrandedProduct = () => {
   );
 
   useEffect(() => {
-    fetch(
-      `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/adImg`
-    )
+    fetch(`https://brandshop-server-six.vercel.app/adImg`)
       .then((res) => res.json())
       .then((data) => setAdImages(data));
   }, []);

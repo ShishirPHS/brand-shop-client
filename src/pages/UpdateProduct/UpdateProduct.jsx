@@ -20,16 +20,13 @@ const UpdateProduct = () => {
     const newProduct = { image, name, brand, type, price, rating };
 
     // send request to server for update product
-    fetch(
-      `https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/product/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newProduct),
-      }
-    )
+    fetch(`https://brandshop-server-six.vercel.app/product/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

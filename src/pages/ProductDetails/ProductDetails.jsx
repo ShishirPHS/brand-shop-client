@@ -8,16 +8,13 @@ const ProductDetails = () => {
 
   const handleAddToCart = (prod) => {
     // send product to the server side to add to cart
-    fetch(
-      "https://brandshop-server-4bxks8oin-shishir-ahmeds-projects.vercel.app/productCart",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(prod),
-      }
-    )
+    fetch("https://brandshop-server-six.vercel.app/productCart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(prod),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
