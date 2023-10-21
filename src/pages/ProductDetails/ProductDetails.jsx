@@ -35,14 +35,16 @@ const ProductDetails = () => {
         <h3 className="text-center font-bold text-3xl mb-12">
           Details of {name}
         </h3>
-        <div className="flex flex-col lg:flex-row p-5 rounded-lg  bg-base-100 shadow-xl h-full pr-8">
-          <figure className="h-[300px] lg:mr-8 mb-6">
-            <img
-              className="h-full w-full lg:w-[250px] object-cover rounded-lg"
-              src={image}
-              alt="Movie"
-            />
-          </figure>
+        <div className="flex flex-col items-center lg:flex-row p-5 rounded-lg  bg-base-100 shadow-xl h-full">
+          <div className="w-full lg:w-1/2 xl:w-auto h-full">
+            <figure className="h-[300px] w-full lg:mr-8 mb-6 lg:mb-0">
+              <img
+                className="h-full w-full lg:w-[250px] object-cover rounded-lg"
+                src={image}
+                alt="Movie"
+              />
+            </figure>
+          </div>
           <div className="h-full flex flex-col justify-center">
             <h4 className="font-bold text-2xl mb-4">{name}</h4>
             <h5 className="text-[#ff4b4b] text-xl font-semibold mb-2">

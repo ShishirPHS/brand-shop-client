@@ -88,7 +88,7 @@ const BrandedProduct = () => {
               </div>
             </div>
           ) : (
-            <p className="mt-20 text-center font-bold text-3xl">
+            <p className="mt-20 text-center font-bold text-3xl mb-36">
               No Products available
             </p>
           )}
