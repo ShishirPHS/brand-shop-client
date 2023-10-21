@@ -31,14 +31,14 @@ const ProductDetails = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container mx-auto my-40">
+      <div className="container mx-auto my-40 px-5 lg:px-0">
         <h3 className="text-center font-bold text-3xl mb-12">
           Details of {name}
         </h3>
-        <div className="card card-side bg-base-100 shadow-xl h-full pr-8">
-          <figure className="h-[300px] mr-8">
+        <div className="flex flex-col lg:flex-row p-5 rounded-lg  bg-base-100 shadow-xl h-full pr-8">
+          <figure className="h-[300px] lg:mr-8 mb-6">
             <img
-              className="h-full w-[250px] object-cover"
+              className="h-full w-full lg:w-[250px] object-cover rounded-lg"
               src={image}
               alt="Movie"
             />
