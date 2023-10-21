@@ -28,7 +28,7 @@ const BrandedProduct = () => {
       <div>
         <div className="container mx-auto">
           <div>
-            <div className="carousel h-[500px] w-full">
+            <div className="carousel h-[580px] w-full">
               <div id="slide1" className="carousel-item relative w-full">
                 <img
                   src={adImgForSelectedBrand[0]?.image}
