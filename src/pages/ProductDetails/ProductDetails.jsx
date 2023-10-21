@@ -36,7 +36,7 @@ const ProductDetails = () => {
           Details of {name}
         </h3>
         <div className="flex flex-col items-center lg:flex-row p-5 rounded-lg  bg-base-100 shadow-xl h-full">
-          <div className="w-full lg:w-1/2 xl:w-auto h-full">
+          <div className="w-full lg:w-auto h-full">
             <figure className="h-[300px] w-full lg:mr-8 mb-6 lg:mb-0">
               <img
                 className="h-full w-full lg:w-[250px] object-cover rounded-lg"
@@ -61,7 +61,7 @@ const ProductDetails = () => {
                 Rating: <span className="font-semibold">{rating} out of 5</span>
               </p>
             </div>
-            <p className="mt-5">{description}</p>
+            <p className="mt-5 max-w-[700px]">{description}</p>
             <div className="mt-5">
               <button onClick={() => handleAddToCart(product)} className="btn">
                 Add to cart
