@@ -1,9 +1,9 @@
 const WhyChooseUs = () => {
   return (
     <div className="bg-[#cecccc]">
-      <div className="container mx-auto my-36 py-32">
-        <div className="flex justify-evenly items-center">
-          <div className="h-full">
+      <div className="container mx-auto my-36 py-32 px-5">
+        <div className="flex flex-col lg:flex-row justify-evenly items-center">
+          <div className="h-full mb-12">
             <h4 className="text-6xl font-bold">Why Choose Us</h4>
             <h5 className="my-8 text-2xl">Exclusive Collections</h5>
             <p className="max-w-[500px]">
