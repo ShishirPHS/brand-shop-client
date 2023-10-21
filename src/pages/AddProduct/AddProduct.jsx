@@ -34,6 +34,7 @@ const AddProduct = () => {
             title: "Success!",
             text: "Product added successfully",
           });
+          form.reset();
         }
       });
   };
