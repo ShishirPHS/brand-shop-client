@@ -74,7 +74,7 @@ const BrandedProduct = () => {
             </div>
           </div>
           {selectedBrandedProducts.length > 0 ? (
-            <div>
+            <div className="px-5 lg:px-0">
               <h2 className="text-center text-3xl font-semibold mt-24 mb-20">
                 Products of {brandName}
               </h2>

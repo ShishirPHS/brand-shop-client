@@ -40,15 +40,15 @@ const MyCart = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container mx-auto grid grid-cols-2 gap-6 mt-36 mb-32">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mt-36 mb-32 px-5 lg:px-0">
         {cartP?.map((singleCartProduct) => (
           <div
             key={singleCartProduct._id}
-            className="card card-side bg-base-100 shadow-xl h-full"
+            className="flex flex-col lg:flex-row p-5 rounded-lg bg-base-100 shadow-xl h-full"
           >
-            <figure className="h-[300px] mr-8">
+            <figure className="h-[300px] lg:mr-8">
               <img
-                className="h-full w-[250px] object-cover"
+                className="h-full w-full lg:w-[250px] object-cover rounded-lg"
                 src={singleCartProduct.image}
                 alt="Movie"
               />

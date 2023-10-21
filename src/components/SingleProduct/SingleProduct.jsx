@@ -6,10 +6,10 @@ const SingleProduct = ({ singleProd }) => {
 
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl h-full">
-        <figure className="h-[300px] mr-8">
+      <div className="flex flex-col lg:flex-row p-5 rounded-lg bg-base-100 shadow-xl h-full">
+        <figure className="h-[300px] lg:mr-8">
           <img
-            className="h-full w-[250px] object-cover"
+            className="h-full w-full lg:w-[250px] object-cover rounded-lg"
             src={image}
             alt="Movie"
           />
