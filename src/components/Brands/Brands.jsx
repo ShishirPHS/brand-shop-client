@@ -15,7 +15,7 @@ const Brands = () => {
       <h2 className="text-4xl font-semibold text-center mb-16">
         Popular Brands
       </h2>
-      <div className="grid grid-cols-1 gap-6 lg:flex justify-evenly">
+      <div className="grid grid-cols-1 gap-6 lg:flex justify-evenly px-5 lg:px-0">
         {brands.map((brand) => (
           <Link key={brand.id} to={`/brandedProduct/${brand.brand_name}`}>
             <div className="flex flex-col items-center border p-5 rounded-lg h-full">

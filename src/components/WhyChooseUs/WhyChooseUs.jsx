@@ -1,7 +1,7 @@
 const WhyChooseUs = () => {
   return (
     <div className="bg-[#cecccc]">
-      <div className="container mx-auto my-36 py-32 px-5">
+      <div className="container mx-auto my-36 py-32 px-5 lg:px-0">
         <div className="flex flex-col lg:flex-row justify-evenly items-center">
           <div className="h-full mb-12">
             <h4 className="text-6xl font-bold">Why Choose Us</h4>

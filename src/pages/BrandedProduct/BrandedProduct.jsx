@@ -73,17 +73,25 @@ const BrandedProduct = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-center text-3xl font-semibold mt-24 mb-20">
-            Products of {brandName}
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-40">
-            {selectedBrandedProducts.map((singleProd) => (
-              <SingleProduct
-                key={singleProd._id}
-                singleProd={singleProd}
-              ></SingleProduct>
-            ))}
-          </div>
+          {selectedBrandedProducts.length > 0 ? (
+            <div>
+              <h2 className="text-center text-3xl font-semibold mt-24 mb-20">
+                Products of {brandName}
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-40">
+                {selectedBrandedProducts.map((singleProd) => (
+                  <SingleProduct
+                    key={singleProd._id}
+                    singleProd={singleProd}
+                  ></SingleProduct>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p className="mt-20 text-center font-bold text-3xl">
+              No Products available
+            </p>
+          )}
         </div>
       </div>
     </div>

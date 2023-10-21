@@ -68,7 +68,7 @@ const Header = () => {
               className="ul menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
-              <div className="ml-4 text-lg text-[#878f97] hover:text-[#242d3b] font-medium">
+              <div className="ml-5 text-lg text-[#878f97] hover:text-[#242d3b] font-medium">
                 {user ? (
                   <button onClick={handleSignOut}>Log Out</button>
                 ) : (
