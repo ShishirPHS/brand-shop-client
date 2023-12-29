@@ -17,7 +17,9 @@ const WhyChooseUs = () => {
           <div>
             <img
               className="w-[300px] h-[500px] object-cover rounded-md"
-              src={"https://i.ibb.co/QYHSypY/unique-cloth.jpg"}
+              src={
+                "https://i.ibb.co/CKNxfJ9/Tie-a-scarf-for-men-Creating-a-stylish-loop-for-men.png"
+              }
               alt=""
             />
           </div>
