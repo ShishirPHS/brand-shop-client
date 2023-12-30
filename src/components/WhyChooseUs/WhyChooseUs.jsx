@@ -1,4 +1,14 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const WhyChooseUs = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div className="bg-[#cecccc]">
       <div className="container mx-auto my-36 py-32 px-5 lg:px-0">
@@ -14,7 +24,7 @@ const WhyChooseUs = () => {
               fashion that not only turns heads but also tells a story.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-right">
             <img
               className="w-[300px] h-[500px] object-cover rounded-md"
               src={
