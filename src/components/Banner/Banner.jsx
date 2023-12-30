@@ -22,6 +22,7 @@ const Banner = () => {
             </h1>
             <p
               data-aos="fade-down"
+              data-aos-delay="500"
               className="text-lg lg:text-xl text-center max-w-[900px] mt-8 font-medium"
             >
               Welcome to StyleCanvas, your one-stop destination for fashion and

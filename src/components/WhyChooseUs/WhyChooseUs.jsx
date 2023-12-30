@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
               fashion that not only turns heads but also tells a story.
             </p>
           </div>
-          <div data-aos="fade-right">
+          <div data-aos="fade-up-right">
             <img
               className="w-[300px] h-[500px] object-cover rounded-md"
               src={
