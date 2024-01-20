@@ -53,28 +53,34 @@ const MyCart = () => {
                 alt="Movie"
               />
             </figure>
-            <div className="h-full flex flex-col justify-center">
-              <h4 className="font-bold text-2xl mb-4">
-                {singleCartProduct.name}
-              </h4>
-              <h5 className="text-[#ff4b4b] text-xl font-semibold mb-2">
-                ${singleCartProduct.price}
-              </h5>
-              <h6>
-                Brand Name:{" "}
-                <span className="font-semibold">{singleCartProduct.brand}</span>
-              </h6>
-              <h6>
-                Product Type:{" "}
-                <span className="font-semibold">{singleCartProduct.type}</span>
-              </h6>
+            <div className="h-full py-5 flex flex-col justify-between items-start">
               <div>
-                <p>
-                  Rating:{" "}
+                <h4 className="font-bold text-2xl mb-4">
+                  {singleCartProduct.name}
+                </h4>
+                <h5 className="text-[#ff4b4b] text-xl font-semibold mb-2">
+                  ${singleCartProduct.price}
+                </h5>
+                <h6>
+                  Brand Name:{" "}
                   <span className="font-semibold">
-                    {singleCartProduct.rating} out of 5
+                    {singleCartProduct.brand}
                   </span>
-                </p>
+                </h6>
+                <h6>
+                  Product Type:{" "}
+                  <span className="font-semibold">
+                    {singleCartProduct.type}
+                  </span>
+                </h6>
+                <div>
+                  <p>
+                    Rating:{" "}
+                    <span className="font-semibold">
+                      {singleCartProduct.rating} out of 5
+                    </span>
+                  </p>
+                </div>
               </div>
               <button
                 className="mt-5 btn"
