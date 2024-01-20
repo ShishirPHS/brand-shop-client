@@ -40,7 +40,8 @@ const MyCart = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mt-36 mb-32 px-5 lg:px-0">
+      <h2 className="text-center font-bold text-4xl mt-32">My Shopping Cart</h2>
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mt-16 mb-32 px-5 lg:px-0">
         {cartP?.map((singleCartProduct) => (
           <div
             key={singleCartProduct._id}
