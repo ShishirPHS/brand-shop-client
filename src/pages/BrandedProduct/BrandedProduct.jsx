@@ -78,7 +78,7 @@ const BrandedProduct = () => {
               <h2 className="text-center text-3xl font-semibold mt-24 mb-20">
                 Products of {brandName}
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-40">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-40">
                 {selectedBrandedProducts.map((singleProd) => (
                   <SingleProduct
                     key={singleProd._id}
