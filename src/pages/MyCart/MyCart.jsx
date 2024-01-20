@@ -45,7 +45,8 @@ const MyCart = () => {
         {cartP?.map((singleCartProduct) => (
           <div
             key={singleCartProduct._id}
-            className="flex flex-col lg:flex-row p-5 rounded-lg bg-base-100 shadow-xl h-full"
+            style={{ boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.5)" }}
+            className="flex flex-col lg:flex-row p-5 rounded-lg bg-base-100 h-full border"
           >
             <figure className="h-[300px] lg:mr-8">
               <img
